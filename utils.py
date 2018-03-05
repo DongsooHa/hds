@@ -41,26 +41,7 @@ def init_logger(logger_name, lv=logging.DEBUG) :
     logger.setLevel(lv)
 
     return logger
-
-
-''' 로그 출력 함수
-'''
-def log_info(logger, msg, extra_msg = "") : 
-    extra = { "extra_info" : ("\n\n" + extra_msg + "\n" if extra_msg != "" else "") }
-    logger.info(msg, extra=extra)
-
-def log_warn(logger, msg, extra_msg = "") :
-    extra = { "extra_info" : ("\n\n" + extra_msg + "\n" if extra_msg != "" else "") }
-    logger.warning(msg, extra=extra)
-
-def log_error(logger, msg, extra_msg = "") :
-    extra = { "extra_info" : ("\n\n" + extra_msg + "\n" if extra_msg != "" else "") }
-    logger.error(msg, extra=extra)
-
-def log_critical(logger, msg, extra_msg = "") :
-    extra = { "extra_info" : ("\n\n" + extra_msg + "\n" if extra_msg != "" else "") }
-    logger.critical(msg, extra=extra)
-
+    
 def log_debug(logger, msg, extra_msg = "") :
     extra = { "extra_info" : ("\n\n" + extra_msg + "\n" if extra_msg != "" else "") }
     logger.debug(msg, extra=extra)
